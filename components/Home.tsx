@@ -37,7 +37,7 @@ export default function HomePage() {
           className="object-cover opacity-60 mix-blend-overlay"
           priority
         />
-        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
+        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center pt-16 sm:pt-0">
           <motion.span {...fadeUp(0.2)} className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
             <Waves className="h-4 w-4" />
             Oază de Liniște

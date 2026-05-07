@@ -46,7 +46,7 @@ const ContactPage = () => (
 
             {/* Info cards */}
             <div className="flex flex-col gap-4">
-               <div className="grid grid-cols-2 gap-4">
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <motion.div {...fadeUp(0.1)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-500">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <MapPin className="h-5 w-5" />
@@ -69,7 +69,7 @@ const ContactPage = () => (
                </div>
 
                <motion.div {...fadeUp(0.3)} className="flex justify-center">
-                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-500 w-1/2">
+                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-500 w-full sm:w-1/2">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <Road className="h-5 w-5" />
                      </div>
