@@ -7,10 +7,10 @@ import { Sun, Clock, Fish } from "lucide-react";
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 32 },
+  initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.9, delay, ease: EASE },
+  transition: { duration: 0.45, delay, ease: EASE },
 });
 
 export default function PretPage() {

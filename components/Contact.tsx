@@ -10,10 +10,10 @@ import lakeView from "@/src/images/lake_view.jpeg"
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
 
 const fadeUp = (delay = 0) => ({
-   initial: { opacity: 0, y: 32 },
+   initial: { opacity: 0, y: 20 },
    whileInView: { opacity: 1, y: 0 },
    viewport: { once: true, margin: '-60px' },
-   transition: { duration: 0.9, delay, ease: EASE },
+   transition: { duration: 0.45, delay, ease: EASE },
 })
 
 const WhatsAppIcon = () => (
@@ -47,7 +47,7 @@ const ContactPage = () => (
             {/* Info cards */}
             <div className="flex flex-col gap-4">
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <motion.div {...fadeUp(0.1)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-500">
+                  <motion.div {...fadeUp(0.1)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <MapPin className="h-5 w-5" />
                      </div>
@@ -57,7 +57,7 @@ const ContactPage = () => (
                      </div>
                   </motion.div>
 
-                  <motion.div {...fadeUp(0.2)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-500">
+                  <motion.div {...fadeUp(0.2)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <Phone className="h-5 w-5" />
                      </div>
@@ -69,7 +69,7 @@ const ContactPage = () => (
                </div>
 
                <motion.div {...fadeUp(0.3)} className="flex justify-center">
-                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-500 w-full sm:w-1/2">
+                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200 w-full sm:w-1/2">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <Road className="h-5 w-5" />
                      </div>
@@ -90,7 +90,7 @@ const ContactPage = () => (
                   href="https://wa.me/40744523284"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 w-full rounded-2xl bg-primary text-white px-5 py-4 font-sans font-bold text-base shadow-sm hover:brightness-105 active:scale-95 hover:-translate-y-0.5 transition-all duration-500 sm:gap-5 sm:px-7 sm:py-5 sm:text-lg"
+                  className="flex items-center gap-4 w-full rounded-2xl bg-primary text-white px-5 py-4 font-sans font-bold text-base shadow-sm hover:brightness-105 active:scale-95 hover:-translate-y-0.5 transition-all duration-200 sm:gap-5 sm:px-7 sm:py-5 sm:text-lg"
                >
                   <WhatsAppIcon />
                   <span>Scrie-ne pe WhatsApp</span>
@@ -99,7 +99,7 @@ const ContactPage = () => (
                   href="https://facebook.com/lacul.verde"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 w-full rounded-2xl bg-blue-950 text-white px-5 py-4 font-sans font-bold text-base shadow-sm hover:brightness-105 active:scale-95 hover:-translate-y-0.5 transition-all duration-500 sm:gap-5 sm:px-7 sm:py-5 sm:text-lg"
+                  className="flex items-center gap-4 w-full rounded-2xl bg-blue-950 text-white px-5 py-4 font-sans font-bold text-base shadow-sm hover:brightness-105 active:scale-95 hover:-translate-y-0.5 transition-all duration-200 sm:gap-5 sm:px-7 sm:py-5 sm:text-lg"
                >
                   <FacebookIcon />
                   <span>Găsește-ne pe Facebook</span>
@@ -110,8 +110,12 @@ const ContactPage = () => (
          {/* RIGHT — images + map */}
          <div className="flex flex-col gap-6">
             <motion.div {...fadeUp(0.15)} className="grid grid-cols-2 gap-4 h-64">
-               <Image src={heroImg} alt="Lacul Verde" className="w-full h-full object-cover rounded-2xl shadow-sm" />
-               <Image src={lakeView} alt="Vedere lac" className="w-full h-full object-cover rounded-2xl shadow-sm" />
+               <div className="relative overflow-hidden rounded-2xl shadow-sm">
+                 <Image src={heroImg} alt="Lacul Verde" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+               </div>
+               <div className="relative overflow-hidden rounded-2xl shadow-sm">
+                 <Image src={lakeView} alt="Vedere lac" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+               </div>
             </motion.div>
             <motion.div {...fadeUp(0.25)} className="flex-1 min-h-[340px] rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30">
                <iframe

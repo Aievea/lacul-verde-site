@@ -17,11 +17,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-outline-variant/30 backdrop-blur-md bg-white/80 transition-all duration-500">
+    <nav className="sticky top-0 z-50 w-full border-b border-outline-variant/30 bg-surface transition-colors duration-200">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link
           href="/"
-          className="flex cursor-pointer items-center gap-2 text-xl font-bold tracking-tight text-primary transition-transform duration-500 hover:scale-105 active:scale-95"
+          className="flex cursor-pointer items-center gap-2 text-xl font-bold tracking-tight text-primary transition-transform duration-200 hover:scale-105 active:scale-95"
         >
           <Waves className="h-6 w-6 text-secondary shrink-0" />
           <span>Lacul Verde Sâncrai</span>
@@ -33,7 +33,7 @@ const Navbar = () => {
             <Link
               key={item.href}
               href={item.href}
-              className={`px-1 py-2 text-sm font-semibold transition-all duration-500 border-b-2 ${
+              className={`px-1 py-2 text-sm font-semibold transition-all duration-200 border-b-2 ${
                 pathname === item.href
                   ? 'border-primary text-primary'
                   : 'border-transparent text-on-surface-variant hover:text-secondary hover:border-secondary/50'
@@ -44,7 +44,7 @@ const Navbar = () => {
           ))}
           <Link
             href="/contact"
-            className="rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-on-primary shadow-lg transition-all duration-500 hover:bg-secondary hover:shadow-xl active:scale-95"
+            className="rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-on-primary shadow-lg transition-all duration-200 hover:bg-secondary hover:shadow-xl active:scale-95"
           >
             Rezervă Acum
           </Link>

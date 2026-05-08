@@ -28,10 +28,10 @@ const CARDS = [
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 32 },
+  initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.9, delay, ease: EASE },
+  transition: { duration: 0.45, delay, ease: EASE },
 })
 
 export default function RegulamentPage() {
@@ -45,7 +45,7 @@ export default function RegulamentPage() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE }}
+          transition={{ duration: 0.5, ease: EASE }}
           className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
         >
           <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow">Regulamentul Băltii</h2>
@@ -71,7 +71,7 @@ export default function RegulamentPage() {
         <motion.div {...fadeUp(0.1)} className="rounded-2xl bg-primary px-5 py-6 sm:px-8 sm:py-8">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <span className="rounded-lg bg-white/10 p-2">
-              <AlertTriangle className="h-5 w-5 text-secondary-container" />
+              <AlertTriangle className="h-5 w-5 text-primary-container" />
             </span>
             <h3 className="font-sans font-bold text-white text-xl">Reguli obligatorii</h3>
           </div>
@@ -82,7 +82,7 @@ export default function RegulamentPage() {
                 initial={{ opacity: 0, x: -16 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: i * 0.07, ease: 'easeOut' }}
+                transition={{ duration: 0.35, delay: i * 0.05, ease: 'easeOut' }}
                 className="flex gap-4 items-start"
               >
                 <span className="shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-white/15 text-white font-sans font-bold text-xs mt-0.5">

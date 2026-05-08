@@ -13,16 +13,16 @@ import stiuca from "@/src/images/stiuca.jpeg"
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
 
 const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 32 },
+  initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 1.0, delay, ease: EASE },
+  transition: { duration: 0.5, delay, ease: EASE },
 });
 
 const scrollFadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 36 },
+  initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.9, delay, ease: EASE },
+  transition: { duration: 0.45, delay, ease: EASE },
 });
 
 export default function HomePage() {
@@ -49,11 +49,11 @@ export default function HomePage() {
             Evadează din cotidian într-o locație premium dedicată pescuitului sportiv. O experiență autentică în natură, creată pentru pescarii pasionați și familiile lor.
           </motion.p>
           <motion.div {...fadeUp(1.1)} className="mt-8 flex flex-col justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
-            <Link href="/contact" className="flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow-lg transition-all duration-500 hover:bg-secondary sm:px-8 sm:py-4 sm:text-base">
+            <Link href="/contact" className="flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow-lg transition-all duration-200 hover:bg-secondary sm:px-8 sm:py-4 sm:text-base">
               <CalendarDays className="h-5 w-5" />
               Rezervă o partidă
             </Link>
-            <Link href="/regulament" className="flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all duration-500 hover:bg-white/20 sm:px-8 sm:py-4 sm:text-base">
+            <Link href="/regulament" className="flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20 sm:px-8 sm:py-4 sm:text-base">
               Vezi Regulamentul
             </Link>
           </motion.div>
@@ -72,7 +72,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <motion.div {...scrollFadeUp(0.1)} className="group relative h-[300px] overflow-hidden rounded-2xl shadow-sm md:col-span-2">
-            <Image src={crap} alt="Crap" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+            <Image src={crap} alt="Crap" className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 66vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
               <div>
@@ -80,12 +80,12 @@ export default function HomePage() {
                 <h3 className="text-3xl font-bold text-white">Crap Românesc</h3>
                 <p className="text-white/70 italic text-sm">Exemplare între 3kg și 15kg</p>
               </div>
-              <ArrowRight className="h-8 w-8 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <ArrowRight className="h-8 w-8 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
             </div>
           </motion.div>
 
           <motion.div {...scrollFadeUp(0.2)} className="group relative h-[300px] overflow-hidden rounded-2xl shadow-sm">
-            <Image src={stiuca} alt="Știucă" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+            <Image src={stiuca} alt="Știucă" className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             <div className="absolute bottom-0 left-0 p-8">
               <h3 className="text-2xl font-bold text-white">Știucă</h3>
@@ -94,7 +94,7 @@ export default function HomePage() {
           </motion.div>
 
           <motion.div {...scrollFadeUp(0.25)} className="group relative h-[200px] overflow-hidden rounded-2xl shadow-sm">
-            <Image src={caras} alt="Caras" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+            <Image src={caras} alt="Caras" className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
               <h3 className="text-xl font-bold text-white">Caras</h3>
@@ -109,7 +109,7 @@ export default function HomePage() {
                 Lacul găzduiește și exemplare de somn, șalău și știucă. Vezi regulamentul pentru fiecare specie în parte.
               </p>
               <Link href="/specii">
-                <button className="mt-4 inline-flex items-center gap-1 font-bold text-secondary hover:text-primary transition-colors duration-500">
+                <button className="mt-4 inline-flex items-center gap-1 font-bold text-secondary hover:text-primary transition-colors duration-200">
                   Vezi Galeria Completă <ChevronRight className="h-4 w-4" />
                 </button>
               </Link>

@@ -11,10 +11,10 @@ import stiuca from "@/src/images/stiuca.jpeg"
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
 
 const slideIn = (fromLeft: boolean, delay = 0) => ({
-  initial: { opacity: 0, x: fromLeft ? -32 : 32 },
+  initial: { opacity: 0, x: fromLeft ? -20 : 20 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.9, delay, ease: EASE },
+  transition: { duration: 0.45, delay, ease: EASE },
 })
 
 export default function Species() {
@@ -26,7 +26,7 @@ export default function Species() {
         initial={{ opacity: 0, y: 28 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.9, ease: EASE }}
+        transition={{ duration: 0.45, ease: EASE }}
         className="mb-12 text-center sm:mb-20"
       >
         <h1 className="text-4xl font-bold text-primary sm:text-5xl">Specii Pești</h1>
@@ -40,7 +40,7 @@ export default function Species() {
         {/* Large card — slides from left */}
         <motion.div {...slideIn(true, 0)} className="lg:col-span-8 overflow-hidden rounded-3xl bg-white shadow-sm border border-outline-variant/30 flex flex-col md:flex-row group">
           <div className="h-64 md:h-auto md:w-1/2 overflow-hidden">
-            <Image src={crap} alt="Crap" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+            <Image src={crap} alt="Crap" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
           </div>
           <div className="p-8 md:w-1/2 flex flex-col justify-center">
             <span className="mb-4 inline-block w-fit rounded-full bg-primary-container px-3 py-1 text-xs font-bold text-primary-fixed">Comun & Oglindă</span>
@@ -58,7 +58,7 @@ export default function Species() {
         {/* Side card — slides from right */}
         <motion.div {...slideIn(false, 0.1)} className="lg:col-span-4 rounded-3xl bg-white shadow-sm border border-outline-variant/30 overflow-hidden flex flex-col group">
           <div className="h-52 overflow-hidden">
-            <Image src={caras} alt="Caras" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+            <Image src={caras} alt="Caras" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
           </div>
           <div className="p-8 flex-1 flex flex-col justify-between">
             <div>
@@ -77,7 +77,7 @@ export default function Species() {
         {/* Somn — slides from left */}
         <motion.div {...slideIn(true, 0.15)} className="lg:col-span-6 rounded-3xl bg-white shadow-sm border border-outline-variant/30 overflow-hidden flex flex-col sm:flex-row group leading-tight">
           <div className="sm:w-2/5 overflow-hidden">
-            <Image src={somn} alt="Somn" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+            <Image src={somn} alt="Somn" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
           </div>
           <div className="p-8 sm:w-3/5 flex flex-col justify-center">
             <h3 className="text-2xl font-bold text-primary">Somn</h3>
@@ -93,7 +93,7 @@ export default function Species() {
         {/* Știucă — slides from right */}
         <motion.div {...slideIn(false, 0.2)} className="lg:col-span-6 rounded-3xl bg-white shadow-sm border border-outline-variant/30 overflow-hidden flex flex-col sm:flex-row group leading-tight">
           <div className="sm:w-2/5 overflow-hidden">
-            <Image src={stiuca} alt="Știucă" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110" />
+            <Image src={stiuca} alt="Știucă" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
           </div>
           <div className="p-8 sm:w-3/5 flex flex-col justify-center">
             <h3 className="text-2xl font-bold text-primary">Știucă</h3>
