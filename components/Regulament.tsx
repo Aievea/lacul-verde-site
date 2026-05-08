@@ -70,8 +70,8 @@ export default function RegulamentPage() {
         {/* Numbered rules */}
         <motion.div {...fadeUp(0.1)} className="rounded-2xl bg-primary px-5 py-6 sm:px-8 sm:py-8">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
-            <span className="rounded-lg bg-white/10 p-2">
-              <AlertTriangle className="h-5 w-5 text-primary-container" />
+            <span className="rounded-lg bg-white/30 p-2">
+              <AlertTriangle className="h-5 w-5 text-red-900" />
             </span>
             <h3 className="font-sans font-bold text-white text-xl">Reguli obligatorii</h3>
           </div>
