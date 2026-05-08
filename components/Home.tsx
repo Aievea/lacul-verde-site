@@ -29,7 +29,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative flex h-[85vh] min-h-[600px] items-center justify-center overflow-hidden bg-primary-container">
+      <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-primary-container sm:h-[85vh] sm:min-h-[640px]">
         <Image
           src={heroImg}
           alt="Lacul Verde Sâncrai"
@@ -37,28 +37,28 @@ export default function HomePage() {
           className="object-cover opacity-60 mix-blend-overlay"
           priority
         />
-        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center pt-16 sm:pt-0">
-          <motion.span {...fadeUp(0.2)} className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
+        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center pt-20 pb-16 sm:pt-0 sm:pb-0">
+          <motion.span {...fadeUp(0.2)} className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
             <Waves className="h-4 w-4" />
             Oază de Liniște
           </motion.span>
-          <motion.h1 {...fadeUp(0.5)} className="text-balance text-5xl font-bold leading-tight text-white md:text-6xl">
+          <motion.h1 {...fadeUp(0.5)} className="text-balance text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
             Descoperă Liniștea la Lacul Verde Sâncrai
           </motion.h1>
-          <motion.p {...fadeUp(0.8)} className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
+          <motion.p {...fadeUp(0.8)} className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-6 sm:text-lg">
             Evadează din cotidian într-o locație premium dedicată pescuitului sportiv. O experiență autentică în natură, creată pentru pescarii pasionați și familiile lor.
           </motion.p>
-          <motion.div {...fadeUp(1.1)} className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className="flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 font-bold text-on-primary shadow-lg transition-all duration-500 hover:bg-secondary">
+          <motion.div {...fadeUp(1.1)} className="mt-8 flex flex-col justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+            <Link href="/contact" className="flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow-lg transition-all duration-500 hover:bg-secondary sm:px-8 sm:py-4 sm:text-base">
               <CalendarDays className="h-5 w-5" />
               Rezervă o partidă
             </Link>
-            <Link href="/regulament" className="flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-transparent px-8 py-4 font-bold text-white transition-all duration-500 hover:bg-white/10 backdrop-blur-sm">
+            <Link href="/regulament" className="flex items-center justify-center gap-2 rounded-lg border-2 border-white bg-white/10 px-6 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all duration-500 hover:bg-white/20 sm:px-8 sm:py-4 sm:text-base">
               Vezi Regulamentul
             </Link>
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-surface to-transparent" />
+        <div className="absolute bottom-0 left-0 h-24 w-full bg-gradient-to-t from-surface to-transparent sm:h-32" />
       </section>
 
       {/* Species section */}

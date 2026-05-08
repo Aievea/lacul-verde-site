@@ -56,7 +56,7 @@ export default function RegulamentPage() {
       </div>
 
       {/* Content */}
-      <div className="mx-auto max-w-5xl px-6 pt-14">
+      <div className="mx-auto max-w-5xl px-4 pt-10 sm:px-6 sm:pt-14">
 
         {/* Quick-rule cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
@@ -68,8 +68,8 @@ export default function RegulamentPage() {
         </div>
 
         {/* Numbered rules */}
-        <motion.div {...fadeUp(0.1)} className="rounded-2xl bg-primary px-8 py-8">
-          <div className="flex items-center gap-3 mb-8">
+        <motion.div {...fadeUp(0.1)} className="rounded-2xl bg-primary px-5 py-6 sm:px-8 sm:py-8">
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <span className="rounded-lg bg-white/10 p-2">
               <AlertTriangle className="h-5 w-5 text-secondary-container" />
             </span>

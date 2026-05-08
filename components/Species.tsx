@@ -11,7 +11,7 @@ import stiuca from "@/src/images/stiuca.jpeg"
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
 
 const slideIn = (fromLeft: boolean, delay = 0) => ({
-  initial: { opacity: 0, x: fromLeft ? -60 : 60 },
+  initial: { opacity: 0, x: fromLeft ? -32 : 32 },
   whileInView: { opacity: 1, x: 0 },
   viewport: { once: true, margin: '-60px' },
   transition: { duration: 0.9, delay, ease: EASE },
@@ -19,7 +19,7 @@ const slideIn = (fromLeft: boolean, delay = 0) => ({
 
 export default function Species() {
   return (
-    <div className="mx-auto max-w-7xl px-6 py-20">
+    <div className="mx-auto max-w-7xl overflow-x-hidden px-6 py-14 sm:py-20">
 
       {/* Header */}
       <motion.div
@@ -27,15 +27,15 @@ export default function Species() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, ease: EASE }}
-        className="mb-20 text-center"
+        className="mb-12 text-center sm:mb-20"
       >
-        <h1 className="text-5xl font-bold text-primary">Specii Pești</h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-on-surface-variant">
+        <h1 className="text-4xl font-bold text-primary sm:text-5xl">Specii Pești</h1>
+        <p className="mx-auto mt-4 max-w-2xl text-base text-on-surface-variant sm:mt-6 sm:text-lg">
           Descoperă diversitatea ihtiologică din Lacul Verde Sâncrai. Apele noastre curate și îngrijite găzduiesc exemplare impresionante.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
 
         {/* Large card — slides from left */}
         <motion.div {...slideIn(true, 0)} className="lg:col-span-8 overflow-hidden rounded-3xl bg-white shadow-sm border border-outline-variant/30 flex flex-col md:flex-row group">
@@ -48,7 +48,7 @@ export default function Species() {
             <p className="mt-4 text-on-surface-variant leading-relaxed">
               Specia predominantă în Lacul Verde, oferind drill-uri spectaculoase. Exemplarele noastre sunt hrănite controlat pentru o sănătate optimă și o dezvoltare armonioasă.
             </p>
-            <div className="mt-8 flex gap-6 text-sm font-bold text-tertiary">
+            <div className="mt-6 flex flex-wrap gap-4 text-sm font-bold text-tertiary sm:mt-8 sm:gap-6">
               <span className="flex items-center gap-2"><Scale className="h-5 w-5" /> Medie: 4 - 8 kg</span>
               <span className="flex items-center gap-2"><Trophy className="h-5 w-5" /> Record: 18.5 kg</span>
             </div>

@@ -29,17 +29,17 @@ const FacebookIcon = () => (
 )
 
 const ContactPage = () => (
-   <div className="mx-auto max-w-7xl px-6 py-20">
+   <div className="mx-auto max-w-7xl px-6 py-14 sm:py-20">
 
       {/* Header */}
-      <motion.div {...fadeUp(0)} className="mb-16 text-center">
-         <h1 className="text-5xl font-bold text-primary">Contactați-ne</h1>
+      <motion.div {...fadeUp(0)} className="mb-10 text-center sm:mb-16">
+         <h1 className="text-4xl font-bold text-primary sm:text-5xl">Contactați-ne</h1>
          <p className="mx-auto mt-4 max-w-xl text-base font-sans text-on-surface-variant leading-relaxed">
             Vă așteptăm cu drag pe malul lacului. Suntem aici să vă ajutăm cu orice informație.
          </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
 
          {/* LEFT */}
          <div className="flex flex-col gap-8">
@@ -90,7 +90,7 @@ const ContactPage = () => (
                   href="https://wa.me/40744523284"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-5 w-full rounded-2xl bg-primary text-white px-7 py-5 font-sans font-bold text-lg shadow-sm hover:brightness-105 hover:-translate-y-0.5 transition-all duration-500"
+                  className="flex items-center gap-4 w-full rounded-2xl bg-primary text-white px-5 py-4 font-sans font-bold text-base shadow-sm hover:brightness-105 active:scale-95 hover:-translate-y-0.5 transition-all duration-500 sm:gap-5 sm:px-7 sm:py-5 sm:text-lg"
                >
                   <WhatsAppIcon />
                   <span>Scrie-ne pe WhatsApp</span>
@@ -99,7 +99,7 @@ const ContactPage = () => (
                   href="https://facebook.com/lacul.verde"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-5 w-full rounded-2xl bg-blue-950 text-white px-7 py-5 font-sans font-bold text-lg shadow-sm hover:brightness-105 hover:-translate-y-0.5 transition-all duration-500"
+                  className="flex items-center gap-4 w-full rounded-2xl bg-blue-950 text-white px-5 py-4 font-sans font-bold text-base shadow-sm hover:brightness-105 active:scale-95 hover:-translate-y-0.5 transition-all duration-500 sm:gap-5 sm:px-7 sm:py-5 sm:text-lg"
                >
                   <FacebookIcon />
                   <span>Găsește-ne pe Facebook</span>
