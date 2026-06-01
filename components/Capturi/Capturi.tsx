@@ -162,14 +162,14 @@ export default function CapturiPage() {
             variants={cardVariants}
             className="group flex flex-col overflow-hidden rounded-3xl border border-outline-variant/30 bg-white shadow-sm"
           >
-            <div style={{ position: "relative", aspectRatio: "4/3", width: "100%", overflow: "hidden" }}>
+            <div style={{ height: "280px", overflow: "hidden", position: "relative" }}>
               <Image
                 src={poza.src}
                 alt={poza.alt ?? poza.fish}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 style={{ objectFit: "cover", objectPosition: "center" }}
-                className="transition-transform duration-300 group-hover:scale-105"
+                className="transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 
@@ -190,3 +190,4 @@ export default function CapturiPage() {
     </div>
   );
 }
+
