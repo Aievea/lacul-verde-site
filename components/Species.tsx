@@ -7,15 +7,7 @@ import crap from "@/src/images/carp.png"
 import Image from "next/image"
 import caras from "@/src/images/caras.png"
 import amur from "@/src/images/amur.jpg"
-
-const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
-
-const slideIn = (fromLeft: boolean, delay = 0) => ({
-  initial: { opacity: 0, x: fromLeft ? -20 : 20 },
-  whileInView: { opacity: 1, x: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.45, delay, ease: EASE },
-})
+import { EASE, slideIn } from '@/lib/motion'
 
 export default function Species() {
   return (
@@ -43,7 +35,7 @@ export default function Species() {
             <Image src={crap} alt="Crap" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
           </div>
           <div className="p-8 md:w-1/2 flex flex-col justify-center">
-            <span className="mb-4 inline-block w-fit rounded-full bg-primary-container px-3 py-1 text-xs font-bold text-primary-fixed">Comun & Oglindă</span>
+            <span className="mb-4 inline-block w-fit rounded-full bg-primary-container px-3 py-1 text-xs font-bold text-secondary-container">Comun & Oglindă</span>
             <h2 className="text-4xl font-bold text-primary">Crap Românesc</h2>
             <p className="mt-4 text-on-surface-variant leading-relaxed">
               Specia predominantă în Lacul Verde, oferind drill-uri spectaculoase. Exemplarele noastre sunt hrănite controlat pentru o sănătate optimă și o dezvoltare armonioasă.
@@ -99,7 +91,7 @@ export default function Species() {
           </div>
           <div className="p-8 flex-1 flex flex-col justify-between">
             <div>
-              <span className="mb-4 inline-block w-fit rounded-full bg-primary-container px-3 py-1 text-xs font-bold text-primary-fixed">Activ & Agil</span>
+              <span className="mb-4 inline-block w-fit rounded-full bg-primary-container px-3 py-1 text-xs font-bold text-secondary-container">Activ & Agil</span>
               <h3 className="text-2xl font-bold text-primary">Amur</h3>
               <p className="mt-4 text-sm text-on-surface-variant leading-relaxed">
                 Cunoscut pentru viteza și agilitatea sa, Amurul curăță vegetația acvatică a lacului. Oferă o pescuire plăcută și accesibilă oricărui pescar, de la începători la avansați.

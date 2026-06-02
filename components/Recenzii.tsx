@@ -2,15 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-
-const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number];
-
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.45, delay, ease: EASE },
-});
+import { EASE, fadeUpInView } from '@/lib/motion';
 
 const REVIEWS = [
   {
@@ -216,7 +208,7 @@ export default function RecenziiPage() {
               return (
                 <motion.article
                   key={i}
-                  {...fadeUp(i * 0.06)}
+                  {...fadeUpInView(i * 0.06)}
                   style={{
                     background: '#ffffff',
                     border: '1px solid #e2ede7',
@@ -293,7 +285,7 @@ export default function RecenziiPage() {
 
       {/* ── CTA bottom ── */}
       <motion.section
-        {...fadeUp(0.1)}
+        {...fadeUpInView(0.1)}
         className="px-6 pb-16 sm:pb-24 text-center"
       >
         <a

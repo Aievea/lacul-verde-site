@@ -14,7 +14,7 @@ interface PricingCardProps {
 }
 
 const PricingCard = ({ icon, title, desc, price, period, features, highlight = false }: PricingCardProps) => (
-  <div className={`relative flex flex-col rounded-2xl p-6 shadow-sm transition-transform duration-300 hover:-translate-y-2 sm:p-8 ${
+  <div className={`relative flex h-full flex-col rounded-2xl p-6 shadow-sm transition-transform duration-300 hover:-translate-y-2 sm:p-8 ${
     highlight ? 'bg-primary text-on-primary ring-4 ring-secondary-container/20' : 'bg-surface border border-outline-variant/30 text-on-surface'
   }`}>
     {highlight && (
@@ -42,7 +42,7 @@ const PricingCard = ({ icon, title, desc, price, period, features, highlight = f
       ))}
     </ul>
     <Link href="/contact" className={`w-full rounded-lg py-3 font-bold transition-all text-center block ${
-      highlight ? 'bg-secondary text-white hover:bg-secondary/90' : 'bg-surface-container border border-outline-variant hover:bg-surface-container-highest'
+      highlight ? 'bg-secondary text-white hover:bg-secondary/90' : 'bg-surface-container border border-outline-variant hover:bg-surface-variant'
     }`}>
       Contactează-ne
     </Link>

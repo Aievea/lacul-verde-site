@@ -3,22 +3,14 @@
 import { motion } from 'framer-motion';
 import PricingCard from "./PricingCard";
 import { Sun, Clock, Fish } from "lucide-react";
-
-const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
-
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.45, delay, ease: EASE },
-});
+import { fadeUpInView } from '@/lib/motion';
 
 export default function PretPage() {
   return (
     <section className="bg-surface-container py-14 px-6 sm:py-20">
       <div className="mx-auto max-w-5xl">
 
-        <motion.div {...fadeUp(0)} className="mb-10 text-center sm:mb-14">
+        <motion.div {...fadeUpInView(0)} className="mb-10 text-center sm:mb-14">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">Pachete & Tarife</h2>
           <p className="mt-3 text-base font-sans text-on-surface-variant max-w-lg mx-auto leading-relaxed">
             Taxa rămâne la nivelul anului trecut — se plătește la bar, la intrarea pe lac.
@@ -56,14 +48,14 @@ export default function PretPage() {
               highlight: false,
             },
           ].map((card, i) => (
-            <motion.div key={card.title} {...fadeUp(i * 0.15)}>
+            <motion.div key={card.title} {...fadeUpInView(i * 0.15)} className="h-full">
               <PricingCard {...card} />
             </motion.div>
           ))}
         </div>
 
         {/* Fish pricing */}
-        <motion.div {...fadeUp(0.1)} className="rounded-2xl bg-primary text-on-primary p-6 mb-6 sm:p-8">
+        <motion.div {...fadeUpInView(0.1)} className="rounded-2xl bg-primary text-on-primary p-6 mb-6 sm:p-8">
           <h3 className="text-lg font-bold font-sans mb-1">Prețuri pește</h3>
           <p className="text-sm font-sans text-white/60 mb-6">
             Se aplică pentru cantitățile ce depășesc limita de 2 kg inclusă în taxă.
@@ -76,7 +68,7 @@ export default function PretPage() {
             ].map(({ name, price }, i) => (
               <motion.div
                 key={name}
-                {...fadeUp(0.2 + i * 0.1)}
+                {...fadeUpInView(0.2 + i * 0.1)}
                 className="flex items-center justify-between rounded-xl bg-white/10 px-5 py-4"
               >
                 <span className="font-sans font-semibold text-sm">{name}</span>
@@ -87,7 +79,7 @@ export default function PretPage() {
         </motion.div>
 
         {/* Notes */}
-        <motion.div {...fadeUp(0.15)} className="rounded-2xl border border-outline-variant/40 bg-surface px-5 py-5 space-y-2 sm:px-8 sm:py-6">
+        <motion.div {...fadeUpInView(0.15)} className="rounded-2xl border border-outline-variant/40 bg-surface px-5 py-5 space-y-2 sm:px-8 sm:py-6">
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-outline mb-3">
             Note importante
           </p>

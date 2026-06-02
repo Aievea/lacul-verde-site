@@ -57,6 +57,7 @@ const Navbar = () => {
           className="md:hidden p-2 rounded-lg hover:bg-outline-variant/30 transition-colors duration-300"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           <AnimatePresence mode="wait" initial={false}>
             {isOpen ? (
