@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Manrope, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -20,10 +20,10 @@ const notoSerif = Noto_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.laculverde.com"),
-  title: "Lacul Verde Sâncrai de Mureș | Pescuit Sportiv",
+  title: "Lacul Verde Sâncraiu de Mureș | Pescuit Sportiv",
   description: "Se adresează exclusiv pescarilor pasionați și cu bun simț!",
   openGraph: {
-    siteName: "Lacul Verde Sâncrai",
+    siteName: "Lacul Verde Sâncraiu",
     locale: "ro_RO",
     type: "website",
   },

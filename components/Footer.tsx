@@ -1,4 +1,4 @@
-import { Waves } from 'lucide-react';
+﻿import { Waves } from 'lucide-react';
 import Link from 'next/link';
 
 const footerLinks = [
@@ -15,7 +15,7 @@ const Footer = () => {
             href="/"
             className="text-2xl font-bold text-on-primary hover:text-white transition-colors cursor-pointer"
           >
-            <span className='flex gap-3'><Waves className='mt-1' />Lacul Verde Sâncrai </span>
+            <span className='flex gap-3'><Waves className='mt-1' />Lacul Verde Sâncraiu </span>
           </Link>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm md:justify-end">
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-5 border-t border-white/10 pt-8 text-center text-xs opacity-60">
-          © {new Date().getFullYear()} Lacul Verde Sâncrai. Toate drepturile rezervate. Pescuit Sportiv de Reziliență.
+          © {new Date().getFullYear()} Lacul Verde Sâncraiu. Toate drepturile rezervate. Pescuit Sportiv de Reziliență.
         </div>
       </div>
     </footer>

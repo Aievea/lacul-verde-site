@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Road } from "lucide-react";
@@ -44,7 +44,7 @@ const ContactPage = () => (
                      </div>
                      <div>
                         <h3 className="font-sans font-bold text-primary text-sm">Locație</h3>
-                        <p className="font-sans text-sm text-on-surface-variant mt-1 leading-snug">Sâncrai de Mureș, Mureș, România</p>
+                        <p className="font-sans text-sm text-on-surface-variant mt-1 leading-snug">Sâncraiu de Mureș, Mureș, România</p>
                      </div>
                   </motion.div>
 
@@ -117,7 +117,7 @@ const ContactPage = () => (
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lacul Verde — Sâncrai de Mureș"
+                  title="Lacul Verde — Sâncraiu de Mureș"
                />
             </motion.div>
          </div>

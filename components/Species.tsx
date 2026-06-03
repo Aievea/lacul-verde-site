@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { motion } from 'framer-motion'
 import { Maximize2, Scale, Trophy } from "lucide-react"
@@ -23,7 +23,7 @@ export default function Species() {
       >
         <h1 className="text-4xl font-bold text-primary sm:text-5xl">Specii Pești</h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-on-surface-variant sm:mt-6 sm:text-lg">
-          Descoperă diversitatea ihtiologică din Lacul Verde Sâncrai. Apele noastre curate și îngrijite găzduiesc exemplare impresionante.
+          Descoperă diversitatea ihtiologică din Lacul Verde Sâncraiu. Apele noastre curate și îngrijite găzduiesc exemplare impresionante.
         </p>
       </motion.div>
 

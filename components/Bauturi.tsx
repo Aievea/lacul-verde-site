@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Zap, Beer, Droplets, Wine } from 'lucide-react';
@@ -126,7 +126,7 @@ export default function BauturiPage() {
           {/* Section heading */}
           <motion.div {...fadeUpInView(0)} className="mb-16 text-center sm:mb-20">
             <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-secondary/60">
-              Lacul Verde · Sâncrai de Mureș
+              Lacul Verde · Sâncraiu de Mureș
             </p>
             <h2 className="font-sans text-4xl font-bold tracking-tight text-primary sm:text-5xl">
               Meniu Bar

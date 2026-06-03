@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import BauturiPage from "@/components/Bauturi";
 
 export const metadata: Metadata = {
-  title: "Băuturi & Răcoritoare | Lacul Verde Sâncrai de Mureș",
-  description: "Meniu băuturi disponibile la barul Lacului Verde din Sâncrai. Răcoritoare, bere, sucuri, apă și spirtoase — totul la mal, după o partidă reușită.",
+  title: "Băuturi & Răcoritoare | Lacul Verde Sâncraiu de Mureș",
+  description: "Meniu băuturi disponibile la barul Lacului Verde din Sâncraiu. Răcoritoare, bere, sucuri, apă și spirtoase — totul la mal, după o partidă reușită.",
   alternates: { canonical: "https://www.laculverde.com/bauturi" },
 };
 
