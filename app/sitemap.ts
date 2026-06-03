@@ -8,5 +8,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.laculverde.com/capturi', priority: 0.6 },
     { url: 'https://www.laculverde.com/contact', priority: 0.7 },
     { url: 'https://www.laculverde.com/regulament', priority: 0.5 },
+    { url: 'https://www.laculverde.com/bauturi', priority: 0.6 },
   ]
 }
