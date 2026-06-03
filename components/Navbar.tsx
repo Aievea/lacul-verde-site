@@ -27,7 +27,7 @@ const Navbar = () => {
           className="flex cursor-pointer items-center gap-2 text-xl font-bold tracking-tight text-primary transition-transform duration-200 hover:scale-105 active:scale-95"
         >
           <Waves className="h-6 w-6 text-secondary shrink-0" />
-          <span>Lacul Verde Sâncraiu</span>
+          <span>Lacul Verde Sâncraiu de Mureș</span>
         </Link>
 
         {/* Desktop Nav */}

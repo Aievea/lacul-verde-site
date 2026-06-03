@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Lacul Verde Sâncraiu de Mureș | Pescuit Sportiv",
   description: "Se adresează exclusiv pescarilor pasionați și cu bun simț!",
   openGraph: {
-    siteName: "Lacul Verde Sâncraiu",
+    siteName: "Lacul Verde Sâncraiu de Mureș",
     locale: "ro_RO",
     type: "website",
   },

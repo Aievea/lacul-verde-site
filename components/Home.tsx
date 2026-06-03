@@ -20,7 +20,7 @@ export default function HomePage() {
       <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-primary-container sm:h-[85vh] sm:min-h-[640px]">
         <Image
           src={heroImg}
-          alt="Lacul Verde Sâncraiu"
+          alt="Lacul Verde Sâncraiu de Mureș"
           fill
           className="object-cover opacity-60 mix-blend-overlay"
           priority
@@ -31,7 +31,7 @@ export default function HomePage() {
             Oază de Liniște
           </motion.span>
           <motion.h1 {...fadeUp(0.5)} className="text-balance text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-            Descoperă Liniștea la Lacul Verde Sâncraiu
+            Descoperă Liniștea la Lacul Verde Sâncraiu de Mureș
           </motion.h1>
           <motion.p {...fadeUp(0.8)} className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-6 sm:text-lg">
             Evadează din cotidian într-o locație premium dedicată pescuitului sportiv. O experiență autentică în natură, creată pentru pescarii pasionați și familiile lor.

@@ -50,84 +50,84 @@ const poze: Poza[] = [
     src: poza1,
     fish: "Crap",
     weight: "9 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Crap",
   },
   {
     src: poza2,
     fish: "Somn ",
     weight: "17 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Somn",
   },
   {
     src: poza3,
     fish: "Somn",
     weight: "7 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Somn",
   },
   {
     src: poza4,
     fish: "Amur",
     weight: "9,5 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Amur",
   },
   {
     src: poza5,
     fish: "Somn",
     weight: "23 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Somn",
   },
   {
     src: poza6,
     fish: "Somn",
     weight: "6 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Somn",
   },
   {
     src: poza7,
     fish: "Crap",
     weight: "6 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Crap",
   },
   {
     src: poza8,
     fish: "Amur",
     weight: "3 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Amur",
   },
   {
     src: poza9,
     fish: "Somn",
     weight: "9 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Somn",
   },
   {
     src: poza10,
     fish: "Crap",
     weight: "5 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Crap",
   },
   {
     src: poza11,
     fish: "Amur",
     weight: "9 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Amur",
   },
   {
     src: poza12,
     fish: "Somn",
     weight: "19 kg",
-    date: "Lacul Verde Sâncraiu",
+    date: "Lacul Verde Sâncraiu de Mureș",
     alt: "Captură Somn",
   },
 ];
@@ -144,7 +144,7 @@ export default function CapturiPage() {
       >
         <h1 className="text-4xl font-bold text-primary sm:text-5xl">Capturi</h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-on-surface-variant sm:mt-6 sm:text-lg">
-          Galerie cu cele mai frumoase capturi realizate de pescarii noștri la Lacul Verde Sâncraiu.
+          Galerie cu cele mai frumoase capturi realizate de pescarii noștri la Lacul Verde Sâncraiu de Mureș.
         </p>
       </motion.div>
 
