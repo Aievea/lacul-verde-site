@@ -1,6 +1,10 @@
-"use client"
+interface RegulationItemProps {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}
 
-const RegulationItem = ({ icon, title, desc }: any) => (
+const RegulationItem = ({ icon, title, desc }: RegulationItemProps) => (
   <div className="flex flex-col items-center text-center gap-3 p-6 rounded-2xl bg-surface border border-outline-variant/30 hover:shadow-md hover:-translate-y-1 transition-all duration-200">
     <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-primary-container text-white shrink-0">
       {icon}

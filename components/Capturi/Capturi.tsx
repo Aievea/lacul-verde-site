@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Calendar, Scale } from "lucide-react";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
+import { EASE } from "@/lib/motion";
 
 import poza1 from "../../src/images/capturi/poza1.jpg";
 import poza2 from "../../src/images/capturi/poza2.jpg";
@@ -17,8 +18,6 @@ import poza9 from "../../src/images/capturi/poza9.jpg";
 import poza10 from "../../src/images/capturi/poza10.jpg";
 import poza11 from "../../src/images/capturi/poza11.jpg";
 import poza12 from "../../src/images/capturi/poza12.jpg";
-
-const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number];
 
 const containerVariants = {
   hidden: {},
@@ -162,14 +161,13 @@ export default function CapturiPage() {
             variants={cardVariants}
             className="group flex flex-col overflow-hidden rounded-3xl border border-outline-variant/30 bg-white shadow-sm"
           >
-            <div style={{ height: "280px", overflow: "hidden", position: "relative" }}>
+            <div className="relative h-[280px] overflow-hidden">
               <Image
                 src={poza.src}
                 alt={poza.alt ?? poza.fish}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                style={{ objectFit: "cover", objectPosition: "center" }}
-                className="transition-transform duration-300 group-hover:scale-110"
+                className="object-cover object-center transition-transform duration-300 group-hover:scale-110"
               />
             </div>
 

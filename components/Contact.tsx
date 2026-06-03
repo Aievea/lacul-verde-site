@@ -3,18 +3,9 @@
 import { motion } from 'framer-motion'
 import { MapPin, Phone, Road } from "lucide-react";
 import Image from "next/image";
+import { fadeUpInView } from '@/lib/motion';
 import heroImg from '@/src/images/hero.png';
 import lakeView from "@/src/images/lake_view.jpeg"
-
-
-const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
-
-const fadeUp = (delay = 0) => ({
-   initial: { opacity: 0, y: 20 },
-   whileInView: { opacity: 1, y: 0 },
-   viewport: { once: true, margin: '-60px' },
-   transition: { duration: 0.45, delay, ease: EASE },
-})
 
 const WhatsAppIcon = () => (
    <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7">
@@ -32,7 +23,7 @@ const ContactPage = () => (
    <div className="mx-auto max-w-7xl px-6 py-14 sm:py-20">
 
       {/* Header */}
-      <motion.div {...fadeUp(0)} className="mb-10 text-center sm:mb-16">
+      <motion.div {...fadeUpInView(0)} className="mb-10 text-center sm:mb-16">
          <h1 className="text-4xl font-bold text-primary sm:text-5xl">Contactați-ne</h1>
          <p className="mx-auto mt-4 max-w-xl text-base font-sans text-on-surface-variant leading-relaxed">
             Vă așteptăm cu drag pe malul lacului. Suntem aici să vă ajutăm cu orice informație.
@@ -47,7 +38,7 @@ const ContactPage = () => (
             {/* Info cards */}
             <div className="flex flex-col gap-4">
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <motion.div {...fadeUp(0.1)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
+                  <motion.div {...fadeUpInView(0.1)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <MapPin className="h-5 w-5" />
                      </div>
@@ -57,7 +48,7 @@ const ContactPage = () => (
                      </div>
                   </motion.div>
 
-                  <motion.div {...fadeUp(0.2)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
+                  <motion.div {...fadeUpInView(0.2)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <Phone className="h-5 w-5" />
                      </div>
@@ -68,7 +59,7 @@ const ContactPage = () => (
                   </motion.div>
                </div>
 
-               <motion.div {...fadeUp(0.3)} className="flex justify-center">
+               <motion.div {...fadeUpInView(0.3)} className="flex justify-center">
                   <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200 w-full sm:w-1/2">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <Road className="h-5 w-5" />
@@ -82,7 +73,7 @@ const ContactPage = () => (
             </div>
 
             {/* Social buttons */}
-            <motion.div {...fadeUp(0.35)} className="rounded-2xl bg-surface border border-outline-variant/30 p-8 flex flex-col gap-4">
+            <motion.div {...fadeUpInView(0.35)} className="rounded-2xl bg-surface border border-outline-variant/30 p-8 flex flex-col gap-4">
                <p className="font-sans font-semibold text-xs uppercase tracking-widest text-outline mb-1">
                   Contactează-ne direct
                </p>
@@ -109,7 +100,7 @@ const ContactPage = () => (
 
          {/* RIGHT — images + map */}
          <div className="flex flex-col gap-6">
-            <motion.div {...fadeUp(0.15)} className="grid grid-cols-2 gap-4 h-64">
+            <motion.div {...fadeUpInView(0.15)} className="grid grid-cols-2 gap-4 h-64">
                <div className="relative overflow-hidden rounded-2xl shadow-sm">
                  <Image src={heroImg} alt="Lacul Verde" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
                </div>
@@ -117,7 +108,7 @@ const ContactPage = () => (
                  <Image src={lakeView} alt="Vedere lac" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
                </div>
             </motion.div>
-            <motion.div {...fadeUp(0.25)} className="flex-1 min-h-[340px] rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30">
+            <motion.div {...fadeUpInView(0.25)} className="flex-1 min-h-[340px] rounded-2xl overflow-hidden shadow-sm border border-outline-variant/30">
                <iframe
                   src="https://maps.google.com/maps?q=46.5444098,24.517671&z=17&output=embed"
                   width="100%"

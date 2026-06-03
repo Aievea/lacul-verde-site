@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import RegulationItem from "@/components/RegulationItem"
 import { AlertTriangle, ShieldCheck, Trash2, VolumeX, Fish, Eye, Ban } from "lucide-react"
 import Image from "next/image"
+import { EASE, fadeUpInView } from '@/lib/motion'
 import lakeView from "@/src/images/lake_view.jpeg"
 
 const RULES = [
@@ -24,15 +25,6 @@ const CARDS = [
   { icon: <Fish className="h-5 w-5" />, title: "Reținere Pește", desc: "2 kg inclus în taxă. Suplimentar se taxează per kg." },
   { icon: <Eye className="h-5 w-5" />, title: "Supraveghere Video", desc: "Perimetru monitorizat 24/7. Furtul se raportează Poliției." },
 ]
-
-const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number]
-
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-60px' },
-  transition: { duration: 0.45, delay, ease: EASE },
-})
 
 export default function RegulamentPage() {
   return (
@@ -61,14 +53,14 @@ export default function RegulamentPage() {
         {/* Quick-rule cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
           {CARDS.map((card, i) => (
-            <motion.div key={card.title} {...fadeUp(i * 0.1)}>
+            <motion.div key={card.title} {...fadeUpInView(i * 0.1)}>
               <RegulationItem icon={card.icon} title={card.title} desc={card.desc} />
             </motion.div>
           ))}
         </div>
 
         {/* Numbered rules */}
-        <motion.div {...fadeUp(0.1)} className="rounded-2xl bg-primary px-5 py-6 sm:px-8 sm:py-8">
+        <motion.div {...fadeUpInView(0.1)} className="rounded-2xl bg-primary px-5 py-6 sm:px-8 sm:py-8">
           <div className="flex items-center gap-3 mb-6 sm:mb-8">
             <span className="rounded-lg bg-white/30 p-2">
               <AlertTriangle className="h-5 w-5 text-red-900" />

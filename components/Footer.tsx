@@ -1,17 +1,12 @@
-'use client';
-
 import { Waves } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+
+const footerLinks = [
+  { href: '/regulament', label: 'Regulament Lac' },
+  { href: 'https://anpc.ro/', label: 'ANPC' },
+];
 
 const Footer = () => {
-  const pathname = usePathname();
-
-  const footerLinks = [
-    { href: '/regulament', label: 'Regulament Lac' },
-    { href: 'https://anpc.ro/', label: 'ANPC' },
-  ];
-
   return (
     <footer className="w-full bg-primary-container py-12 text-on-primary/80 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -37,7 +32,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-5 border-t border-white/10 pt-8 text-center text-xs opacity-60">
-          © 2026 Lacul Verde Sâncrai. Toate drepturile rezervate. Pescuit Sportiv de Reziliență.
+          © {new Date().getFullYear()} Lacul Verde Sâncrai. Toate drepturile rezervate. Pescuit Sportiv de Reziliență.
         </div>
       </div>
     </footer>
