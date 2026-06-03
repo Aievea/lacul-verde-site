@@ -141,7 +141,7 @@ export default function BauturiPage() {
               <div className="h-px w-20 bg-gradient-to-l from-transparent to-secondary/30" />
             </div>
             <p className="mt-5 font-serif text-base italic text-on-surface-variant">
-              Disponibil la bar · Plată în numerar
+              Disponibil la bar · Plată numerar sau card
             </p>
           </motion.div>
 
@@ -201,7 +201,7 @@ export default function BauturiPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-outline-variant/50" />
               <p className="font-serif text-sm italic text-on-surface-variant">
-                Prețurile sunt valabile pentru sezonul 2026 · Plată numerar
+                Prețurile sunt valabile pentru sezonul 2026 · Plată numerar sau card
               </p>
               <div className="h-px w-12 bg-outline-variant/50" />
             </div>
