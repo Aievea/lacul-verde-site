@@ -12,6 +12,7 @@ const navItems = [
   { href: '/pret', label: 'Tarife' },
   { href: '/capturi', label: 'Capturi' },
   { href: '/recenzii', label: 'Recenzii' },
+  { href: '/bauturi', label: 'Băuturi' },
 ];
 
 const Navbar = () => {
