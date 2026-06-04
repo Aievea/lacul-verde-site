@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Zap, Beer, Droplets, Wine } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { fadeUp, fadeUpInView, EASE } from '@/lib/motion';
+import { fadeUp, fadeUpInView } from '@/lib/motion';
 
 type Product = { name: string; price: number };
 
@@ -75,12 +75,12 @@ export default function BauturiPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative flex min-h-[48vh] items-center justify-center overflow-hidden bg-primary-container sm:min-h-[55vh]">
+      <section className="relative flex min-h-[48vh] items-center justify-center overflow-hidden bg-primary-container sm:min-h-[55vh] lg:min-h-[75vh]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1920&q=75"
           alt="Băuturi răcoritoare la lac"
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
 
@@ -174,13 +174,9 @@ export default function BauturiPage() {
 
                 {/* Product list */}
                 <div className="divide-y divide-stone-100 bg-white">
-                  {cat.items.map((item, ii) => (
-                    <motion.div
+                  {cat.items.map((item) => (
+                    <div
                       key={item.name}
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: ci * 0.12 + ii * 0.06, duration: 0.4, ease: EASE }}
                       className="group flex cursor-default items-center justify-between px-8 py-4 transition-all duration-200 hover:bg-amber-50 hover:pl-10"
                     >
                       <span className="font-serif text-[15px] leading-snug text-stone-700 transition-colors duration-200 group-hover:text-primary">
@@ -189,7 +185,7 @@ export default function BauturiPage() {
                       <span className="ml-6 shrink-0 font-sans text-lg font-bold tabular-nums text-amber-500 transition-all duration-200 group-hover:scale-110 group-hover:text-amber-600">
                         {item.price} <span className="text-sm font-semibold text-amber-400/80">lei</span>
                       </span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </motion.div>
