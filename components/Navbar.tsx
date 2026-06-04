@@ -49,7 +49,7 @@ const Navbar = () => {
             href="/contact"
             className="rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-on-primary shadow-lg transition-all duration-200 hover:bg-secondary hover:shadow-xl active:scale-95"
           >
-            Rezervă Acum
+            Contactează-ne
           </Link>
         </div>
 
@@ -128,7 +128,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     className="block mt-2 rounded-xl bg-primary py-4 px-6 text-center font-bold text-lg text-on-primary shadow-lg hover:bg-secondary active:scale-95 transition-all duration-300"
                   >
-                    Rezervă Acum
+                    Contactează-ne
                   </Link>
                 </motion.div>
               </div>

@@ -40,7 +40,7 @@ export default function HomePage() {
             <motion.div {...fadeUp(1.1)}>
               <Link href="/contact" className="flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-bold text-on-primary shadow-lg transition-colors duration-200 hover:bg-secondary sm:px-8 sm:py-4 sm:text-base">
                 <CalendarDays className="h-5 w-5" />
-                Rezervă o partidă
+                Contactează-ne
               </Link>
             </motion.div>
             <MotionLink
