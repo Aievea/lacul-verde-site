@@ -1,17 +1,16 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Beer, Droplets, Wine } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
-import { fadeUp, fadeUpInView } from '@/lib/motion';
+import { Droplets } from 'lucide-react';
+import { fadeUp, fadeUpInView, EASE } from '@/lib/motion';
 
 type Product = { name: string; price: number };
 
 type Category = {
   title: string;
   subtitle: string;
-  Icon: LucideIcon;
-  iconGradient: string;
+  image: string;
+  imageAlt: string;
   items: Product[];
 };
 
@@ -19,8 +18,8 @@ const categories: Category[] = [
   {
     title: 'Răcoritoare doză',
     subtitle: 'Energizante & băuturi carbogazoase',
-    Icon: Zap,
-    iconGradient: 'from-sky-400 to-blue-600',
+    image: 'https://images.unsplash.com/photo-1527960471264-932f39eb5846?auto=format&fit=crop&w=900&q=80',
+    imageAlt: 'Doze colorate răcoritoare',
     items: [
       { name: 'Hell', price: 6 },
       { name: 'Frutti Fresh Piersici', price: 6 },
@@ -33,8 +32,8 @@ const categories: Category[] = [
   {
     title: 'Bere',
     subtitle: 'Sticle reci, direct la mal',
-    Icon: Beer,
-    iconGradient: 'from-amber-400 to-orange-500',
+    image: 'https://images.unsplash.com/photo-1671118720259-026c46d4a67c?auto=format&fit=crop&w=900&q=80',
+    imageAlt: 'Sticle de bere reci pe gheață',
     items: [
       { name: 'Skol sticlă 0.33L', price: 5 },
       { name: 'Tuborg sticlă 0.33L', price: 7 },
@@ -45,8 +44,8 @@ const categories: Category[] = [
   {
     title: 'Sucuri & Apă',
     subtitle: 'Hidratare naturală, oricând',
-    Icon: Droplets,
-    iconGradient: 'from-teal-400 to-emerald-600',
+    image: 'https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=900&q=80',
+    imageAlt: 'Pahare cu sucuri colorate',
     items: [
       { name: 'Coca-Cola 0.5L', price: 7 },
       { name: 'Fanta Struguri 0.5L', price: 7 },
@@ -59,8 +58,8 @@ const categories: Category[] = [
   {
     title: 'Spirtoase',
     subtitle: 'Porție 100 ml',
-    Icon: Wine,
-    iconGradient: 'from-purple-500 to-rose-600',
+    image: 'https://images.unsplash.com/photo-1718221367403-70a706c8a80e?auto=format&fit=crop&w=900&q=80',
+    imageAlt: 'Sticle de spirtoase la bar',
     items: [
       { name: 'Alexandrion 5*', price: 14 },
       { name: 'Jägermeister', price: 16 },
@@ -75,12 +74,12 @@ export default function BauturiPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative flex min-h-[48vh] items-center justify-center overflow-hidden bg-primary-container sm:min-h-[55vh] lg:min-h-[75vh]">
+      <section className="relative flex min-h-[48vh] items-center justify-center overflow-hidden bg-primary-container sm:min-h-[55vh]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1920&q=75"
           alt="Băuturi răcoritoare la lac"
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-30"
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
 
@@ -112,80 +111,71 @@ export default function BauturiPage() {
       </section>
 
       {/* ── Menu ── */}
-      <section
-        className="relative px-6 py-20 sm:py-28"
-        style={{
-          background:
-            'radial-gradient(ellipse 80% 40% at 10% 0%, rgba(1,45,29,0.07) 0%, transparent 70%),' +
-            'radial-gradient(ellipse 70% 50% at 90% 100%, rgba(44,105,78,0.05) 0%, transparent 70%),' +
-            '#f4f6ee',
-        }}
-      >
+      <section className="bg-surface-container px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-5xl">
 
           {/* Section heading */}
-          <motion.div {...fadeUpInView(0)} className="mb-16 text-center sm:mb-20">
-            <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-secondary/60">
+          <motion.div {...fadeUpInView(0)} className="mb-12 text-center sm:mb-16">
+            <p className="mb-2 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-secondary/60">
               Lacul Verde · Sâncraiu de Mureș
             </p>
             <h2 className="font-sans text-4xl font-bold tracking-tight text-primary sm:text-5xl">
               Meniu Bar
             </h2>
-            <div className="mt-5 flex items-center justify-center gap-3">
-              <div className="h-px w-20 bg-gradient-to-r from-transparent to-secondary/30" />
-              <div className="flex gap-1">
-                <span className="h-1.5 w-1.5 rounded-full bg-secondary/40" />
-                <span className="h-1.5 w-4 rounded-full bg-secondary/25" />
-                <span className="h-1.5 w-1.5 rounded-full bg-secondary/40" />
-              </div>
-              <div className="h-px w-20 bg-gradient-to-l from-transparent to-secondary/30" />
-            </div>
-            <p className="mt-5 font-serif text-base italic text-on-surface-variant">
+            <p className="mt-4 font-serif text-base italic text-on-surface-variant">
               Disponibil la bar · Plată numerar sau card
             </p>
           </motion.div>
 
           {/* Category cards */}
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:gap-7 lg:grid-cols-2">
             {categories.map((cat, ci) => (
               <motion.div
                 key={cat.title}
-                {...fadeUpInView(ci * 0.12)}
-                className="overflow-hidden rounded-3xl shadow-2xl shadow-primary/15 ring-1 ring-primary/10"
+                {...fadeUpInView(ci * 0.1)}
+                className="overflow-hidden rounded-2xl bg-surface shadow-md shadow-primary/10 ring-1 ring-outline-variant/40"
               >
-                {/* Card header — dark green gradient */}
-                <div className="bg-gradient-to-br from-[#1b4332] to-[#012d1d] px-8 py-8">
-                  <div className="flex items-center gap-5">
-                    <div
-                      className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${cat.iconGradient} shadow-lg`}
-                    >
-                      <cat.Icon className="h-8 w-8 text-white" strokeWidth={1.75} />
-                    </div>
-                    <div>
-                      <h3 className="font-sans text-xl font-bold leading-snug text-white">
-                        {cat.title}
-                      </h3>
-                      <p className="mt-1 font-serif text-sm italic text-white/50">
-                        {cat.subtitle}
-                      </p>
-                    </div>
+                {/* Image with gradient overlay + title */}
+                <div className="relative h-44 overflow-hidden sm:h-52">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={cat.image}
+                    alt={cat.imageAlt}
+                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent" />
+
+                  {/* Title — bottom */}
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <h3 className="font-sans text-xl font-bold leading-tight text-white sm:text-2xl">
+                      {cat.title}
+                    </h3>
+                    <p className="mt-0.5 font-serif text-sm italic text-white/60">
+                      {cat.subtitle}
+                    </p>
                   </div>
                 </div>
 
                 {/* Product list */}
-                <div className="divide-y divide-stone-100 bg-white">
-                  {cat.items.map((item) => (
-                    <div
+                <div className="divide-y divide-outline-variant/30">
+                  {cat.items.map((item, ii) => (
+                    <motion.div
                       key={item.name}
-                      className="group flex cursor-default items-center justify-between px-8 py-4 transition-all duration-200 hover:bg-amber-50 hover:pl-10"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: ci * 0.1 + ii * 0.05, duration: 0.35, ease: EASE }}
+                      className="group flex cursor-default items-center justify-between px-5 py-3.5 transition-colors duration-200 hover:bg-surface-container sm:px-6"
                     >
-                      <span className="font-serif text-[15px] leading-snug text-stone-700 transition-colors duration-200 group-hover:text-primary">
+                      <span className="font-serif text-[15px] leading-snug text-on-surface transition-colors duration-200 group-hover:text-primary">
                         {item.name}
                       </span>
-                      <span className="ml-6 shrink-0 font-sans text-lg font-bold tabular-nums text-amber-500 transition-all duration-200 group-hover:scale-110 group-hover:text-amber-600">
-                        {item.price} <span className="text-sm font-semibold text-amber-400/80">lei</span>
+                      <span className="ml-4 shrink-0 font-sans text-base font-bold tabular-nums text-secondary">
+                        {item.price}{' '}
+                        <span className="text-sm font-medium text-on-surface-variant">lei</span>
                       </span>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
@@ -193,14 +183,10 @@ export default function BauturiPage() {
           </div>
 
           {/* Footer note */}
-          <motion.div {...fadeUpInView(0.55)} className="mt-16 text-center">
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-outline-variant/50" />
-              <p className="font-serif text-sm italic text-on-surface-variant">
-                Prețurile sunt valabile pentru sezonul 2026 · Plată numerar sau card
-              </p>
-              <div className="h-px w-12 bg-outline-variant/50" />
-            </div>
+          <motion.div {...fadeUpInView(0.5)} className="mt-12 text-center">
+            <p className="font-serif text-sm italic text-on-surface-variant">
+              Prețurile sunt valabile pentru sezonul 2026 · Plată numerar sau card
+            </p>
           </motion.div>
 
         </div>
