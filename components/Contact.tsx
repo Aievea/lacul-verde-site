@@ -1,7 +1,7 @@
 ﻿"use client"
 
 import { motion } from 'framer-motion'
-import { MapPin, Phone, Road } from "lucide-react";
+import { MapPin, Phone, Road, Clock } from "lucide-react";
 import Image from "next/image";
 import { fadeUpInView } from '@/lib/motion';
 import heroImg from '@/src/images/hero.png';
@@ -59,8 +59,8 @@ const ContactPage = () => (
                   </motion.div>
                </div>
 
-               <motion.div {...fadeUpInView(0.3)} className="flex justify-center">
-                  <div className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200 w-full sm:w-1/2">
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <motion.div {...fadeUpInView(0.3)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
                      <div className="rounded-xl bg-primary p-3 text-white shrink-0">
                         <Road className="h-5 w-5" />
                      </div>
@@ -68,8 +68,27 @@ const ContactPage = () => (
                         <h3 className="font-sans font-bold text-primary text-sm">Strada</h3>
                         <p className="font-sans text-sm text-on-surface-variant mt-1">Principala 199B</p>
                      </div>
-                  </div>
-               </motion.div>
+                  </motion.div>
+
+                  <motion.div {...fadeUpInView(0.4)} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm border border-outline-variant/30 hover:shadow-md transition-shadow duration-200">
+                     <div className="rounded-xl bg-primary p-3 text-white shrink-0">
+                        <Clock className="h-5 w-5" />
+                     </div>
+                     <div className="flex-1 min-w-0">
+                        <h3 className="font-sans font-bold text-primary text-sm">Program</h3>
+                        <div className="mt-1 flex flex-col gap-0.5">
+                           <div className="flex justify-between gap-4 font-sans text-sm text-on-surface-variant">
+                              <span>Sâmbătă</span>
+                              <span>09:00 – 18:00</span>
+                           </div>
+                           <div className="flex justify-between gap-4 font-sans text-sm text-on-surface-variant">
+                              <span>Duminică</span>
+                              <span>08:00 – 18:00</span>
+                           </div>
+                        </div>
+                     </div>
+                  </motion.div>
+               </div>
             </div>
 
             {/* Social buttons */}
