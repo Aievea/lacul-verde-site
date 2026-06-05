@@ -15,7 +15,7 @@ const Footer = () => {
             href="/"
             className="text-2xl font-bold text-on-primary hover:text-white transition-colors cursor-pointer"
           >
-            <span className='flex gap-3'><Waves className='mt-1' />Lacul Verde Sâncraiu de Mureș</span>
+            <span className='flex gap-3'><Waves className='mt-1 shrink-0' /><span className="leading-tight sm:hidden">Lacul Verde<br />Sâncraiu de Mureș</span><span className="hidden sm:inline">Lacul Verde Sâncraiu de Mureș</span></span>
           </Link>
 
           <div className="flex flex-wrap justify-center gap-6 text-sm md:justify-end">

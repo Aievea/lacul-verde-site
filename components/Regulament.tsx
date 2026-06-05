@@ -53,7 +53,7 @@ export default function RegulamentPage() {
         {/* Quick-rule cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12">
           {CARDS.map((card, i) => (
-            <motion.div key={card.title} {...fadeUpInView(i * 0.1)}>
+            <motion.div key={card.title} {...fadeUpInView(i * 0.1)} className="h-full">
               <RegulationItem icon={card.icon} title={card.title} desc={card.desc} />
             </motion.div>
           ))}
