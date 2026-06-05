@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const MotionLink = motion.create(Link);
 import Image from 'next/image';
-import { Waves, CalendarDays, ChevronRight, Fish, ArrowRight } from 'lucide-react';
+import { Waves, CalendarDays, ChevronRight, Fish } from 'lucide-react';
 
 import { fadeUp, fadeUpInView } from '@/lib/motion';
 import heroImg from '@/src/images/hero.png';
@@ -74,7 +74,6 @@ export default function HomePage() {
                 <h3 className="text-3xl font-bold text-white">Crap Românesc</h3>
                 <p className="text-white/70 italic text-sm">Exemplare între 3kg și 15kg</p>
               </div>
-              <ArrowRight className="h-8 w-8 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
             </div>
           </motion.div>
 
@@ -96,22 +95,22 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          <motion.div {...fadeUpInView(0.3)} className="flex h-[200px] items-center rounded-2xl bg-secondary-container/30 border border-secondary/20 p-8 md:col-span-2">
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-primary">Descoperă toate speciile</h3>
-              <p className="mt-2 max-w-md text-on-secondary-container/80 text-sm">
-                Lacul găzduiește și exemplare de somn, șalău și știucă. Vezi regulamentul pentru fiecare specie în parte.
-              </p>
-              <Link href="/specii">
-                <button className="mt-4 inline-flex items-center gap-1 font-bold text-secondary hover:text-primary transition-colors duration-200">
+          <Link href="/specii" className="md:col-span-2">
+            <motion.div {...fadeUpInView(0.3)} className="flex h-[200px] cursor-pointer items-center rounded-2xl bg-secondary-container/30 border border-secondary/20 p-8 transition-colors duration-200 hover:bg-secondary-container/50">
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-primary">Descoperă toate speciile</h3>
+                <p className="mt-2 max-w-md text-on-secondary-container/80 text-sm">
+                  Lacul găzduiește și exemplare de somn, șalău și știucă. Vezi regulamentul pentru fiecare specie în parte.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 font-bold text-secondary">
                   Vezi Galeria Completă <ChevronRight className="h-4 w-4" />
-                </button>
-              </Link>
-            </div>
-            <div className="hidden sm:flex h-24 w-24 items-center justify-center rounded-full bg-secondary-container text-secondary">
-              <Fish className="h-12 w-12" />
-            </div>
-          </motion.div>
+                </span>
+              </div>
+              <div className="hidden sm:flex h-24 w-24 items-center justify-center rounded-full bg-secondary-container text-secondary">
+                <Fish className="h-12 w-12" />
+              </div>
+            </motion.div>
+          </Link>
         </div>
       </section>
     </>
