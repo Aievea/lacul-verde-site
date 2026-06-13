@@ -8,10 +8,10 @@ import Image from 'next/image';
 import { Waves, CalendarDays, ChevronRight, Fish } from 'lucide-react';
 
 import { fadeUp, fadeUpInView } from '@/lib/motion';
-import heroImg from '@/src/images/hero.png';
-import crap from "@/src/images/carp.png"
-import caras from "@/src/images/caras.png"
-import somn from "@/src/images/somn.png"
+import heroImg from '@/src/images/hero.jpg';
+import crap from "@/src/images/carp.jpg"
+import caras from "@/src/images/caras.jpg"
+import somn from "@/src/images/somn.jpg"
 
 export default function HomePage() {
   return (

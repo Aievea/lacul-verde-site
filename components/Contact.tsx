@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { MapPin, Phone, Road, Clock } from "lucide-react";
 import Image from "next/image";
 import { fadeUpInView } from '@/lib/motion';
-import heroImg from '@/src/images/hero.png';
+import heroImg from '@/src/images/hero.jpg';
 import lakeView from "@/src/images/lake_view.jpeg"
 
 const WhatsAppIcon = () => (

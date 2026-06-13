@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { Maximize2, Scale, Trophy } from "lucide-react"
-import somn from "@/src/images/somn.png"
-import crap from "@/src/images/carp.png"
+import somn from "@/src/images/somn.jpg"
+import crap from "@/src/images/carp.jpg"
 import Image from "next/image"
-import caras from "@/src/images/caras.png"
+import caras from "@/src/images/caras.jpg"
 import amur from "@/src/images/amur.jpg"
 import { EASE, slideIn } from '@/lib/motion'
 
